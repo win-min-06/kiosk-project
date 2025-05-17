@@ -28,6 +28,9 @@ export class Product {
   @Column({ nullable: true })
   imageUrl: string;
 
+  @Column()
+  categoryId: number;
+
   @ManyToOne(() => Category, (category) => category.products)
   category: Category;
 
